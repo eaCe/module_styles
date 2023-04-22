@@ -33,6 +33,9 @@ class ModuleStyles {
     // add stylesheet
     let link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
+    link.onload = () => {
+      $panel.classList.add('module-styles-loaded');
+    };
     link.setAttribute('href', this.stylesheet);
     $panel.shadowRoot.appendChild(link);
   }
