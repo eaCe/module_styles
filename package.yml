@@ -1,0 +1,32 @@
+package: module_styles
+version: "0.0.1-dev"
+name: Module-Styles
+author: eaCe
+supportpage: https://github.com/eaCe/module_styles
+
+requires:
+    redaxo: ^5.14.0
+
+page:
+    title: translate:title
+    perm: admin
+    icon: rex-icon fa-paint-brush
+    subpages:
+        settings: { title: translate:settings }
+        pjax: false
+
+installer_ignore:
+    - node_modules
+    - .git
+    - .gitignore
+    - .github
+    - package.json
+    - webpack.mix.js
+    - package-lock.json
+    - php-cs-fixer.dist.php
+    - yarn.lock
+    - resources
+    - .editorconfig
+    - .eslintrc.js
+    - .stylelintrc.js
+    - vendor
