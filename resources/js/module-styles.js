@@ -21,6 +21,7 @@ class ModuleStyles {
 
   wrapSlices ($panel) {
     const content = $panel.innerHTML;
+    $panel.innerHTML = ''
 
     // attach shadow DOM
     $panel.attachShadow({ mode: 'open' });
