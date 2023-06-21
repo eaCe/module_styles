@@ -1,2 +1,4 @@
 module_styles_title = Module-Styles
 module_styles_settings = Einstellungen
+module_styles_settings_desc = Hier können Sie die Einstellungen für das Modul ändern.
+module_styles_multiline = Gib die URL zum Stylesheet ein. Du kannst auch mehrere URLs eingeben, jede in einer neuen Zeile.

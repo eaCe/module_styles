@@ -3,8 +3,9 @@
 $addon = rex_addon::get('module_styles');
 
 $form = rex_config_form::factory('module_styles');
-$field = $form->addInputField('text', 'module_stylesheet', null, ['class' => 'form-control', 'placeholder' => '/css/styles.css']);
+$field = $form->addTextAreaField('module_stylesheet', null, ['class' => 'form-control', 'placeholder' => '/css/styles.css']);
 $field->setLabel('Stylesheet URL');
+$field->setNotice($addon->i18n('multiline'));
 
 $fragment = new rex_fragment();
 $fragment->setVar('class', 'edit module-styles-settings', false);

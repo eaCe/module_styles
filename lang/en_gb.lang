@@ -1,2 +1,3 @@
 module_styles_title = Module-Styles
 module_styles_settings = Settings
+module_styles_multiline = Enter the URL to the stylesheet. You can also enter multiple URLs, each on a new line.

@@ -6,9 +6,9 @@ $(document).on('rex:ready', function () {
 class ModuleStyles {
   constructor () {
     this.$slicePanels = document.querySelectorAll('ul.rex-slices .panel-default .panel-body');
-    this.stylesheet = rex.moduleStylesheet;
+    this.stylesheets = rex.moduleStylesheet;
 
-    if (!this.stylesheet) {
+    if (!this.stylesheets) {
       return
     }
 
@@ -32,12 +32,14 @@ class ModuleStyles {
     $panel.shadowRoot.innerHTML = content;
 
     // add stylesheet
-    let link = document.createElement('link');
-    link.setAttribute('rel', 'stylesheet');
-    link.onload = () => {
-      $panel.classList.add('module-styles-loaded');
-    };
-    link.setAttribute('href', this.stylesheet);
-    $panel.shadowRoot.appendChild(link);
+    this.stylesheets.forEach((stylesheet) => {
+      let link = document.createElement('link');
+      link.setAttribute('rel', 'stylesheet');
+      link.onload = () => {
+        $panel.classList.add('module-styles-loaded');
+      };
+      link.setAttribute('href', stylesheet);
+      $panel.shadowRoot.appendChild(link);
+    });
   }
 }
