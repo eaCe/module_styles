@@ -13,6 +13,7 @@ page:
     icon: rex-icon fa-paint-brush
     subpages:
         settings: { title: translate:settings }
+        help: { title: Help, subPath: README.md, icon: rex-icon fa-question-circle, itemclass: pull-right }
         pjax: false
 
 installer_ignore:
